@@ -16,6 +16,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<h1>Welcome to Third Place!</h1>} />
         <Route path="/search" element={<Search />} />
+        <Route path="/cafe/:cafeId" element={<CafeDetail />} /> {/* Dynamic route */}
         <Route path="/forum" element={<Forum />} />
       </Routes>
     </Router>
@@ -23,3 +24,4 @@ const App = () => {
 };
 
 export default App;
+
