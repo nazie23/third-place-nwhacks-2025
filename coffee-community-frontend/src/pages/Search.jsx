@@ -8,7 +8,7 @@ const Search = () => {
 
   // Fetch the CSV data when the component mounts
   useEffect(() => {
-    Papa.parse("../sample-data-Coffee_shops.csv", {
+    Papa.parse("sample-data-Coffee_shops.csv", {
       download: true,
       header: true,
       complete: (result) => {
