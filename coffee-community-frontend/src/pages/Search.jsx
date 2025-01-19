@@ -32,7 +32,6 @@ const Search = () => {
         placeholder="Search for cafes..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        style={{ padding: '10px', width: '300px', marginBottom: '20px' }}
       />
       <ul>
         {cafes.map((cafe) => (
