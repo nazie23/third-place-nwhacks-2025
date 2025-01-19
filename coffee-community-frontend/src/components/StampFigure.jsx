@@ -4,7 +4,7 @@ import '../styles/Complete.css';
 const StampFigure = () => {
   return (
     <div className="stamp-figure">
-      <img alt="Visited Stamp" />
+      {/* <img alt="Visited Stamp" /> */}
     </div>
   );
 };

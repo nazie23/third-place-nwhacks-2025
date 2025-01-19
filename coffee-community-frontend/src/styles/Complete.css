@@ -146,4 +146,33 @@ body {
     font-weight: bold;
     position: absolute;
   }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .prev-button,
+  .next-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev-button:disabled,
+  .next-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .prev-button:hover:not(:disabled),
+  .next-button:hover:not(:disabled) {
+    background-color: #45a049;
+  }
   
