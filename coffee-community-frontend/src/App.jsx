@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Search from "./pages/Search";
 import Forum from "./pages/Forum"
 import './App.css';
+import CafeDetail from "./pages/CafeDetail";
 import Account from "./pages/Account";
 const App = () => {
   return (
