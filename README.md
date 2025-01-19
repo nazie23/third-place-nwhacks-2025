@@ -8,7 +8,6 @@ Setup:
 - npm install axios
 
 
-Running project; in the root directory, run in separate terminals:
+Running project:
 
-- npm run start-backend
-- npm run start-frontend
+- npm run dev

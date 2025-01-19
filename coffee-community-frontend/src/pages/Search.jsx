@@ -1,47 +1,44 @@
-// src/pages/Search.jsx
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import Papa from "papaparse";
 
 const Search = () => {
-  const [query, setQuery] = useState('');
-  const [cafes, setCafes] = useState([]);
+  const [coffeeShops, setCoffeeShops] = useState([]);
+  const [filteredShops, setFilteredShops] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
+  // Fetch the CSV data when the component mounts
   useEffect(() => {
-    if (query.length === 0) {
-      setCafes([]);
-      return;
-    }
+    Papa.parse("../sample-data-Coffee_shops.csv", {
+      download: true,
+      header: true,
+      complete: (result) => {
+        setCoffeeShops(result.data);
+        setFilteredShops(result.data);  // Set initial filtered list to all shops
+      },
+    });
+  }, []);
 
-    const fetchCafes = async () => {
-      try {
-        const res = await axios.get(`http://localhost:5000/api/cafes?query=${query}`);
-        // const res = await axios.get(`mongodb://localhost:5000/CoffeeConnectionsDB/api/cafes?query=${query}`);
-        setCafes(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+  // Filter coffee shops based on the search query
+  const handleSearch = (query) => {
+    setSearchQuery(query);
 
-    fetchCafes();
-  }, [query]);
+    const filtered = coffeeShops.filter((shop) =>
+      shop.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredShops(filtered);
+  };
 
   return (
     <div>
-      <h1>Search Cafes</h1>
       <input
         type="text"
-        placeholder="Search for cafes..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search for a coffee shop"
+        value={searchQuery}
+        onChange={(e) => handleSearch(e.target.value)}
       />
       <ul>
-        {cafes.map((cafe) => (
-          <li key={cafe._id}>
-            <h3>{cafe.name}</h3>
-            <p>Address: {cafe.address}</p>
-            <p>Location: {cafe.location}</p>
-            <p>Rating: {cafe.rating}</p>
-          </li>
+        {filteredShops.map((shop, index) => (
+          <li key={index}>{shop.name}</li>
         ))}
       </ul>
     </div>
