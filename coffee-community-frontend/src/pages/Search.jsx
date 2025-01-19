@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { Link } from "react-router-dom";
-import './Search.css';
+import "./Search.css";
 
 const Search = () => {
   const [coffeeShops, setCoffeeShops] = useState([]);
   const [filteredShops, setFilteredShops] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-
 
   useEffect(() => {
     Papa.parse("../sample-data-Coffee_shops.csv", {
@@ -16,8 +15,7 @@ const Search = () => {
       complete: (result) => {
         const data = result.data;
         setCoffeeShops(data);
-        setFilteredShops(data); 
-        localStorage.setItem("coffeeShops", JSON.stringify(data));
+        setFilteredShops(data);
       },
     });
   }, []);
@@ -32,26 +30,28 @@ const Search = () => {
 
   return (
     <div>
-    <input
-      type="text"
-      placeholder="Search for a coffee shop"
-      value={searchQuery}
-      onChange={(e) => handleSearch(e.target.value)}
-      className="search-input"
-    />
-    <div className="coffee-shops-container">
-      {filteredShops.map((shop, index) => (
-        <div className="coffee-card" key={index}>
-          <Link to={`/cafe/${shop.name}`} className="coffee-card-link">
-            <h2>{shop.name}</h2>
-            <p>{shop.address}</p>
-            <p>{shop.city}</p>
-            <p>{shop.state}</p>
-          </Link>
+      <input
+        type="text"
+        placeholder="Search for a coffee shop"
+        value={searchQuery}
+        onChange={(e) => handleSearch(e.target.value)}
+        className="search-input"
+      />
+      <div className="scrollable-container">
+        <div className="coffee-shops-container">
+          {filteredShops.map((shop, index) => (
+            <div className="coffee-card" key={index}>
+              <Link to={`/cafe/${shop.name}`} className="coffee-card-link">
+                <h2>{shop.name}</h2>
+                <p>{shop.address}</p>
+                <p>{shop.city}</p>
+                <p>{shop.state}</p>
+              </Link>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
-  </div>
   );
 };
 
