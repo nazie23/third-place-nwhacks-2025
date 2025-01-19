@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .booklet {
+    width: 700px; /* Increased width to encompass both pages */
+    min-height: 450px; /* Adjusted height to accommodate all content */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: visible; /* Ensures all elements are visible */
+    position: relative;
+    display: flex;
+    flex-direction: row; /* Pages are laid out side by side */
+    padding: 20px; /* Adds padding around the content */
+    gap: 20px; /* Adds space between the left and right sections */
+    box-sizing: border-box;
+  }
+  
+  .page {
+    flex: 1; /* Both pages share equal width */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left {
+    background-color: #e0f7fa; /* Light blue for the left page */
+  }
+  
+  .right {
+    background-color: #fff; /* White background for the right page */
+  }
+  
+  h1, h2 {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .user-info, .loyalty-info {
+    margin-bottom: 20px;
+  }
+  
+  /* Loyalty Card Styling */
+  .loyalty-card {
+    width: 100%;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .loyalty-card h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .card-details {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .card-details p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #555;
+  }
+  
+  .loyalty-card .points {
+    font-weight: bold;
+    color: #4caf50;
+    font-size: 1.1em;
+  }
+  
+  .barcode {
+    margin: 15px 0;
+  }
+  
+  .barcode img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .coupons {
+    background-color: #ffeb3b;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  
+  /* Stamp Improvements */
+  .stamp {
+    width: 60px;
+    height: 60px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9em;
+    margin: 20px auto;
+  }
+  
+  .stamp-figure {
+    width: 80px;
+    height: 80px;
+    background-color: #f8d7da;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .stamp-figure::before {
+    content: '';
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 3px solid #d50000;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .stamp-figure::after {
+    content: 'Visited';
+    font-size: 14px;
+    color: #d50000;
+    font-weight: bold;
+    position: absolute;
+  }
+  

@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+.booklet {
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page {
+  flex: 1; /* Allow pages to expand proportionally */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  background-color: #e0f7fa;
+}
+
+.right {
+  background-color: #fff;
+}
+
+h1, h2 {
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #ccc;
+}
+
+.user-info, .loyalty-info {
+  margin-bottom: 20px;
+}
+
+.stamp {
+  width: 60px;
+  height: 60px;
+  background-color: #ff9800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 20px auto;
+}

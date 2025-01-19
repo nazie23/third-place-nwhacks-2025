@@ -1,0 +1,29 @@
+.stamp-figure {
+  width: 80px;
+  height: 80px;
+  background-color: #f8d7da;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.stamp-figure::before {
+  content: '';
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border: 3px solid #d50000;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.stamp-figure::after {
+  content: 'Visited';
+  font-size: 14px;
+  color: #d50000;
+  font-weight: bold;
+  position: absolute;
+}
