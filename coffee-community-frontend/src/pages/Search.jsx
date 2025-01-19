@@ -52,7 +52,9 @@ const Search = () => {
       <ul>
         {filteredShops.length > 0 ? (
           filteredShops.map((shop, index) => (
-            <li key={index}>{shop.name}</li>
+            <li key={index}>
+              <a href="#">{shop.name}</a>
+            </li>
           ))
         ) : (
           <li>No coffee shops found</li>
