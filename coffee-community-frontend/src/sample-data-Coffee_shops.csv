@@ -1,10 +1,10 @@
-﻿name,address,country,state,city,star_count
-Mukasi Coffee Roasters,"417 Front Street Mews, New Westminster, BC V3L 1A4, Canada",Canada,British Columbia,New Westminster,4.6
-Blenz Coffee,"Blenz on Main & East 26th St, 4198 Main St, Vancouver, BC V5V 3P7, Canada",Canada,British Columbia,Vancouver,4.2
-Tru Cafe,"1500 W 2nd Ave, Vancouver, BC V6J 5C5, Canada",Canada,British Columbia,Vancouver,4.7
-Moja Coffee,"1412 Rupert St, North Vancouver, BC V7J 1E9, Canada",Canada,British Columbia,Vancouver,4.7
-Bean Around the World Coffees,"175 W Hastings St, Vancouver, BC V6B 1G8, Canada",Canada,British Columbia,Vancouver,3.9
-Trees Organic Coffee Joyce-Collingwood,"5078 Joyce St, Vancouver, BC V5R 4G6, Canada",Canada,British Columbia,Vancouver,4.1
-Everbean Café,"15331 16 Ave #106, Surrey, BC V4A 0C1, Canada",Canada,British Columbia,Surrey,4.7
-Ethical Bean Coffee,"1315 Kootenay St, Vancouver, BC V5K 4Y3, Canada",Canada,British Columbia,Vancouver,4.3
-Caffè Cittadella,"2310 Ash St, Vancouver, BC V5Z 3C2, Canada",Canada,British Columbia,Vancouver,4.1
+﻿name, address, country, state, city, rating
+Mukasi Coffee Roasters, 417 Front Street Mews, Canada, British Columbia, New Westminster, 4.6
+Blenz Coffee, Blenz on Main & East 26th St; 4198 Main St, Canada,British Columbia, Vancouver, 4.2
+Tru Cafe, 1500 W 2nd Ave, Canada, British Columbia, Vancouver, 4.7
+Moja Coffee, 1412 Rupert St, Canada, British Columbia, North Vancouver, 4.7
+Bean Around the World, 175 W Hastings St, Canada, British Columbia, Vancouver, 3.9
+Trees Organic Coffee, 5078 Joyce St, Canada, British Columbia, Vancouver, 4.1
+Everbean Café, 15331 16 Ave #106, Canada, British Columbia, Surrey, 4.7
+Ethical Bean Coffee, 1315 Kootenay St, Canada, British Columbia, Vancouver 4.3
+Caffè Cittadella, 2310 Ash St, Canada, British Columbia, Vancouver, 4.1

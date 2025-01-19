@@ -20,10 +20,11 @@ const Search = () => {
 
   // Filter coffee shops based on the search query
   const handleSearch = (query) => {
+    console.log('Searching', query);
     setSearchQuery(query);
 
     const filtered = coffeeShops.filter((shop) =>
-      shop.name.toLowerCase().includes(query.toLowerCase())
+      (shop.name || "").toLowerCase().includes(query.toLowerCase())
     );
     setFilteredShops(filtered);
   };
