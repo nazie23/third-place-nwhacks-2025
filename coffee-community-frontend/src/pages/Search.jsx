@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-import { Link } from "react-router-dom";
-import './Search.css';
 
 const Search = () => {
   const [coffeeShops, setCoffeeShops] = useState([]);
@@ -32,26 +30,22 @@ const Search = () => {
 
   return (
     <div>
-    <input
-      type="text"
-      placeholder="Search for a coffee shop"
-      value={searchQuery}
-      onChange={(e) => handleSearch(e.target.value)}
-      className="search-input"
-    />
-    <div className="coffee-shops-container">
-      {filteredShops.map((shop, index) => (
-        <div className="coffee-card" key={index}>
-          <Link to={`/cafe/${shop.name}`} className="coffee-card-link">
-            <h2>{shop.name}</h2>
-            <p>{shop.address}</p>
-            <p>{shop.city}</p>
-            <p>{shop.state}</p>
-          </Link>
-        </div>
-      ))}
+      <input
+        type="text"
+        placeholder="Search for a coffee shop"
+        value={searchQuery}
+        onChange={(e) => handleSearch(e.target.value)}
+      />
+      <ul>
+        {filteredShops.length > 0 ? (
+          filteredShops.map((shop, index) => (
+            <li key={index}>{shop.name}</li>
+          ))
+        ) : (
+          <li>No coffee shops found</li>
+        )}
+      </ul>
     </div>
-  </div>
   );
 };
 
