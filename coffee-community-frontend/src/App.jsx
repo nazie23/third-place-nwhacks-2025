@@ -6,6 +6,7 @@ import Forum from "./pages/Forum"
 import './App.css';
 import CafeDetail from "./pages/CafeDetail";
 import Account from "./pages/Account";
+
 const App = () => {
   return (
     <Router>
@@ -19,7 +20,7 @@ const App = () => {
         <Route path="/" element={<h1>Welcome to Third Place!</h1>} />
         <Route path="/search" element={<Search />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/cafe/:cafeId" element={<CafeDetail />} /> {/* Dynamic route */}
+        <Route path="/cafe/:cafeId" element={<CafeDetail />} />
         <Route path="/forum" element={<Forum />} />
       </Routes>
     </Router>
