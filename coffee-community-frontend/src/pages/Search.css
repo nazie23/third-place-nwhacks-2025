@@ -5,7 +5,8 @@
     text-align: center;
 }
 
-.input {
+.custom-input {
+    background-color: whitesmoke;
     padding: '10px';
     width: '300px';
 }

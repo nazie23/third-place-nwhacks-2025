@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Papa from "papaparse";
+import './Search.css'
 
 const Search = () => {
   const [coffeeShops, setCoffeeShops] = useState([]);
@@ -44,6 +44,7 @@ const Search = () => {
     <div>
       <input
         type="text"
+        className="custom-input"
         placeholder="Search for a coffee shop"
         value={searchQuery}
         onChange={(e) => handleSearch(e.target.value)}

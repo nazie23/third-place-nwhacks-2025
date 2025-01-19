@@ -23,11 +23,22 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Ensure the body takes the full viewport height */
+  margin: 0; /* Remove default margins */
+  font-family: Arial, sans-serif;
+  color: white; /* Adjust text color for contrast */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
