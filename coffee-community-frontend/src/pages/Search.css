@@ -5,7 +5,29 @@
     text-align: center;
 }
 
-.input {
+.custom-input {
+    background-color: whitesmoke;
+    color: black;
     padding: '10px';
     width: '300px';
+}
+
+ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff;        /* Default link color */
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;        /* Hover color */
+    cursor: pointer;       /* Pointer cursor to indicate clickable */
 }
