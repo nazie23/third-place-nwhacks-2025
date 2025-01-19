@@ -8,16 +8,22 @@ const Search = () => {
 
   // Fetch the CSV data when the component mounts
   useEffect(() => {
-    Papa.parse("sample-data-Coffee_shops.csv", {
-      download: true,
-      header: true,
-      complete: (result) => {
-        console.log("CSV Data:", result.data);
-        setCoffeeShops(result.data);
-        setFilteredShops(result.data);  // Set initial filtered list to all shops
-      },
-    });
+    // Fetch the CSV file
+    fetch("/sample-data-Coffee_shops.csv")
+      .then((response) => response.text())
+      .then((data) => {
+        // Parse CSV data into an array of objects
+        const rows = data.split("\n").slice(1); // Remove header row
+        const parsedData = rows.map((row) => {
+          const [name, address] = row.split(",");
+          return { name: name.trim(), address: address?.trim() };
+        });
+        setCoffeeShops(parsedData);
+        setFilteredShops(parsedData);
+      })
+      .catch((error) => console.error("Error fetching CSV:", error));
   }, []);
+
 
   // Filter coffee shops based on the search query
   const handleSearch = (query) => {
