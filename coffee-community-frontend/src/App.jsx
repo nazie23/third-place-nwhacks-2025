@@ -27,7 +27,14 @@ const App = () => {
       </div>
       <div className="content">
         <Routes>
-          <Route path="/" element={<h1 style={{ fontSize: "3rem", textAlign: "center" }}>Welcome to Third Place!</h1>} />
+          <Route path="/" element={
+            <div>
+              <h1 style={{ fontSize: "5rem", textAlign: "center" }}>Welcome to Third Place!</h1>
+              <p style={{ fontSize: "2rem", textAlign: "center" }}>
+                Find your home-away-from-home through third spaces such as cafes, gyms, and bookstores. Build a community and cultivate bonds by discovering local gems, social events, and earning rewards in style!
+              </p>
+            </div>
+          } />
           <Route path="/search" element={<Search />} />
           <Route path="/account" element={<Account />} />
           <Route path="/cafe/:cafeId" element={<CafeDetail />} />

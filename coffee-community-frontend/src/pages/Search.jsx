@@ -40,7 +40,8 @@ const Search = () => {
       <div className="scrollable-container">
         <div className="coffee-shops-container">
           {filteredShops.map((shop, index) => (
-            <div className="coffee-card" key={index}>
+            <div className="coffee-card-wrapper">
+            <div className="coffee-card">
               <Link to={`/cafe/${shop.name}`} className="coffee-card-link">
                 <h2>{shop.name}</h2>
                 <p>{shop.address}</p>
@@ -48,6 +49,8 @@ const Search = () => {
                 <p>{shop.state}</p>
               </Link>
             </div>
+          </div>
+          
           ))}
         </div>
       </div>
