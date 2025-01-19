@@ -1,0 +1,13 @@
+{
+    "name": "coffee-community",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start-backend": "cd coffee-community-backend && node index.js",
+      "start-frontend": "cd coffee-community-frontend && npm run dev"
+    },
+    "dependencies": {
+      "concurrently": "^7.4.0"
+    }
+  }
+  

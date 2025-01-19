@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const CafeSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -7,4 +7,4 @@ const CafeSchema = new mongoose.Schema({
   rating: { type: Number, min: 0, max: 5 }
 });
 
-export default mongoose.model('Cafe', CafeSchema);
+module.exports = mongoose.model('Cafe', CafeSchema);

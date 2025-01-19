@@ -1,6 +1,6 @@
 // routes/cafes.js
-import express from 'express';
-import Cafe from '../models/Cafe.js';
+const express = require('express');
+const Cafe = require('../models/Cafe.js');
 
 const router = express.Router();
 
@@ -17,4 +17,4 @@ router.get('/', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;

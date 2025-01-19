@@ -1,29 +1,21 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import cafeRoutes from './routes/cafes.js';
-
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const cafesRoutes = require('./routes/cafes');
 require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+// Middleware
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Server is running');
-});
+// Use cafes routes
+app.use('/api/cafes', cafesRoutes);
 
-const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
-
-app.use('/api/cafes', cafeRoutes);
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch((err) => console.error('Error connecting to MongoDB:', err));
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
