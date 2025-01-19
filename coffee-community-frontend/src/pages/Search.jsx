@@ -15,6 +15,7 @@ const Search = () => {
     const fetchCafes = async () => {
       try {
         const res = await axios.get(`http://localhost:5000/api/cafes?query=${query}`);
+        // const res = await axios.get(`mongodb://localhost:5000/CoffeeConnectionsDB/api/cafes?query=${query}`);
         setCafes(res.data);
       } catch (err) {
         console.error(err);
