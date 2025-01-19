@@ -1,4 +1,4 @@
-/* Style for the navigation tabs */
+/* Style for the navigation tabs
 .tabs-container {
   display: flex;
   justify-content: center;
@@ -47,7 +47,8 @@
 
 .tab:focus {
   outline: none;
-}
+} */
+
 
 /* Style for the navigation tabs */
 .tabs-container {
@@ -82,4 +83,16 @@
 
 .tab:focus {
   outline: none;
+}
+.nav {
+  display: flex;
+  gap: 20;
+  padding: 20;
+  background: #f5f5f5;
+
+}
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
