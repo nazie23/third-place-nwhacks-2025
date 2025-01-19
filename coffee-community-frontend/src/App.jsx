@@ -27,7 +27,7 @@ const App = () => {
       </div>
       <div className="content">
         <Routes>
-          <Route path="/" element={<h1>Welcome to Third Place!</h1>} />
+          <Route path="/" element={<h1 style={{ fontSize: "3rem", textAlign: "center" }}>Welcome to Third Place!</h1>} />
           <Route path="/search" element={<Search />} />
           <Route path="/account" element={<Account />} />
           <Route path="/cafe/:cafeId" element={<CafeDetail />} />
