@@ -12,6 +12,7 @@ const Search = () => {
       download: true,
       header: true,
       complete: (result) => {
+        console.log("CSV Data:", result.data);
         setCoffeeShops(result.data);
         setFilteredShops(result.data);  // Set initial filtered list to all shops
       },
@@ -20,12 +21,16 @@ const Search = () => {
 
   // Filter coffee shops based on the search query
   const handleSearch = (query) => {
-    console.log('Searching', query);
+    console.log('Searching for:', query);
     setSearchQuery(query);
 
-    const filtered = coffeeShops.filter((shop) =>
-      (shop.name || "").toLowerCase().includes(query.toLowerCase())
-    );
+    const filtered = coffeeShops.filter((shop) => {
+      const shopName = shop.name || ""; // Get the name, fallback to empty string if it's undefined
+      console.log("Checking shop:", shopName);
+      return shopName.toLowerCase().includes(query.toLowerCase());
+    });
+
+    console.log("Filtered shops:", filtered);
     setFilteredShops(filtered);
   };
 
@@ -38,9 +43,13 @@ const Search = () => {
         onChange={(e) => handleSearch(e.target.value)}
       />
       <ul>
-        {filteredShops.map((shop, index) => (
-          <li key={index}>{shop.name}</li>
-        ))}
+        {filteredShops.length > 0 ? (
+          filteredShops.map((shop, index) => (
+            <li key={index}>{shop.name}</li>
+          ))
+        ) : (
+          <li>No coffee shops found</li>
+        )}
       </ul>
     </div>
   );
