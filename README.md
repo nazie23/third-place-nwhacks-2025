@@ -1,5 +1,5 @@
 # Third Place: Because sometimes, you just need to touch grass
-## made for nwHacks 2025
+made for nwHacks 2025
 
 ## Pitch
 Find your home-away-from-home through third spaces such as cafes, gyms and bookstores. Build a community and cultivate bonds by discovering local gems, social events and earning rewards in style!
