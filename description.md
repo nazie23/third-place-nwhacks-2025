@@ -32,17 +32,4 @@ We used GitHub to facilitate version control and collaboration on our project. O
 - Implement a social system where users can friend other users on the website
 - Implement a feature where users can visit places with their friends and check-in with them on the website to gain additional loyalty points using technology similar to AirDrop
 - Move our website to an app eventually!
-
-
-## Setup
-
-- npm install
-- npm install react-router-dom
-- npm install express mongoose cors dotenv
-- npm install axios
-- npm install papaparse
-
-
-## Running project
-
-- npm run dev
+- 
